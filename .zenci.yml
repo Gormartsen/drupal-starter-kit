@@ -23,9 +23,9 @@ deploy:
   pull_request:
     server: qa.drupal-site.net
     username: test
-    dir: '{home}/github/{repo_owner}/{repo_name}/pr/{pr}'
+    dir: '{home}/github/{repo_owner}/{repo_name}/pr/{pr_number}'
     env_vars:
-      docroot: '{home}/domains/{branch}.qa.drupal-site.net'
+      docroot: '{home}/domains/{pr_number}.{branch}.qa.drupal-site.net'
       domain: '{pr_number}.{branch}.qa.drupal-site.net'
       database_name: 'test_{pr_number}'
       database_user: 'test_{pr_number}'
