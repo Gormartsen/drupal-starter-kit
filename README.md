@@ -1,5 +1,5 @@
 # backdrop-startup-kit
-Repository contain integration scripts to start using deploy via ZenCI for BackdropCMS website
+Repository contain integration scripts to start using deploy via ZenCI for DrupalCMS website
 
 It has next structure
 -------
