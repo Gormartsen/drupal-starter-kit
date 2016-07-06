@@ -41,3 +41,24 @@ deploy:
       init: '{deploy_dir}/scripts/deploy_init.sh'
       after: '{deploy_dir}/scripts/deploy_update.sh'
       remove: '{deploy_dir}/scripts/deploy_remove.sh'
+test:
+  php53:
+    branch:
+      box: 'dual-leam-php53'
+      dir: '{home}/github'
+      env_vars:
+        docroot: '{home}/www'
+        domain: 'localhost'
+        database_name: 'test'
+        database_user: 'test'
+        database_pass: ''
+        account_user: admin
+        account_mail: admin@zen.ci
+        account_pass: REPLACE_WITH_ADMIN_PASSWORD
+        site_mail: admin@zen.ci
+        site_name: test
+        tests: '--all'
+      scripts:
+        init: '{deploy_dir}/scripts/test_deploy_init.sh'
+      tests:
+        - '{deploy_dir}/scripts/drupal_tests.php'
