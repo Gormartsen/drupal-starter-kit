@@ -44,10 +44,7 @@ deploy:
 test:
   php53:
     branch:
-      box: 
-        machine: 'dual'
-        image: 'leam-php70'
-        preemptible: true
+      box: 'dual-leam-php53'
       dir: '{home}/github'
       env_vars:
         docroot: '{home}/www'
