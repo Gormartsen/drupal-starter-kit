@@ -46,7 +46,7 @@ test:
     branch:
       box: 
         machine: 'dual'
-        image: 'analog-subset-130814/leam-php70'
+        image: 'centos-cloud/centos-6'
         preemptible: true
       dir: '{home}/github'
       env_vars:
